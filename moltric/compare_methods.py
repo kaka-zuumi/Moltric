@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 import re
 import sys
-import fileinput
-import argparse
 import io
 import os
 
@@ -39,18 +37,22 @@ if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
 
     if (len(sys.argv) < 3):
-      print("Error! Wrong number of arguments... should be:")
-      print("        (1) the fDMD threshold to identify new points with (use 0.00001 for a complete comparison)")
-      print("        (2) the output XYZ file to dump new points into (by default, will append rather than overwrite)")
-      print("Optional argumnets:")
-      print("        (3) the cell parameters for the XYZ (if they use PBC) ... enter 'None' if you need the 4th argument and need to skip this one")
-      print("        (4) an unused method option (an integer)")
-      print("        (5) an input XYZ file to read reference points from")
-      print("")
-      print("Example usage:")
-      print('# cat /mnt/lustre/koa/koastore/rsun_group/kazuumiTest1/MLexp1/cGDMLv1/ionicliquid1.xyz | /mnt/lustre/koa/koastore/rsun_group/scripts/printUniqueGeometriesBy_fQAP.py 1.0 output.xyz "12.76858 0.0 0.0 0.0 12.76858 0.0 0.0 0.0 12.76858"')
-      print("")
-      sys.exit()
+
+      errmessage = """
+      Error! Wrong number of arguments... should be:
+              (1) the fDMD threshold to identify new points with (use 0.00001 for a complete comparison)
+              (2) the output XYZ file to dump new points into (by default, will append rather than overwrite)
+      Optional arguments:
+              (3) the cell parameters for the XYZ (if they use PBC) ... enter 'None' if you need the 4th argument and need to skip this one
+              (4) an unused method option (an integer)
+              (5) an input XYZ file to read reference points from
+      
+      Example usage:
+      # cat examples/fromFujioka_CH.indene_19atoms.xyz | moltric/compare_methods.py 0.00001 output.xyz
+      # cat examples/fromFujioka_ionicliquid_PBC_205atoms.xyz | moltric/compare_methods.py 0.00001 output.xyz "12.76858 0.0 0.0 0.0 12.76858 0.0 0.0 0.0 12.76858"
+      """
+
+      raise ValueError(errmessage)
 
 
     fDMDmax   = sys.argv[1]
