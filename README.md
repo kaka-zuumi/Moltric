@@ -36,8 +36,6 @@ this produces:
 # Number of points found in 'examples/fromFujioka_CH.indene_19atoms.xyz': 81
 # Number of points found in 'examples/fromFujioka_CH.indene_19atoms.xyz': 81
 #    i    j      DMD
-/home/kazuumi/.conda/envs/sgdmlSTUFF/lib/python3.11/site-packages/ot/bregman/_sinkhorn.py:666: UserWarning: Sinkhorn did not converge. You might want to increase the number of iterations `numItermax` or the regularization parameter `reg`.
-  warnings.warn(
      0    0      0.0000
      0    1      2.1084
      0    2      3.9254
