@@ -32,13 +32,13 @@ Many groups have searched for this, but improvements are constantly being made:
 
 
 A few benchmarks will be compared over:
-- C10H9BiRxn (Bimolecular Reaction of CH + C_9H_8 and C_2H_4 + C_8H_5)
-- H3CSBiRxn (Bimolecular Reaction of CH + H_2S)
-- H5CBrBiRxn (Bimolecular Reaction of HBr^+ + CH_4)
-- Ne20 (20-atom Subsets of a Neon_{200} Cluster) [[source](https://doi.org/10.1021/acs.jcim.5c02099)]
-- Ne180 (180-atom Subsets of a Neon_{200} Cluster) [[source](https://doi.org/10.1021/acs.jcim.5c02099)]
-- FGG (FGG tripeptide C_{13}H_{17}N_3O_4 Conformers) [[source](https://doi.org/10.1021/acs.jcim.5c02099)]
-- BsMaWa (Bisulfate-Methylammonium-Water Cluster CH_9NO_5S Conformers) [[source](https://doi.org/10.1021/acs.jcim.5c02099)]
+- C10H9 (Bimolecular Reaction of CH + C<sub>9</sub>H<sub>8</sub> and C<sub>2</sub>H<sub>4</sub> + C<sub>8</sub>H<sub>5</sub>)
+- H3CS (Bimolecular Reaction of CH + H<sub>2</sub>S)
+- H5CBr (Bimolecular Reaction of HBr<sup>+</sup> + CH<sub>4</sub>)
+- Ne20 (20-atom Subsets of a Neon<sub>200</sub> Cluster) [[source](https://doi.org/10.1021/acs.jcim.5c02099)]
+- Ne180 (180-atom Subsets of a Neon<sub>200</sub> Cluster) [[source](https://doi.org/10.1021/acs.jcim.5c02099)]
+- FGG (FGG tripeptide C<sub>13</sub>H<sub>17</sub>N<sub>3</sub>O<sub>4</sub> Conformers) [[source](https://doi.org/10.1021/acs.jcim.5c02099)]
+- BsMaWa (Bisulfate-Methylammonium-Water Cluster CH<sub>9</sub>NO<sub>5</sub>S Conformers) [[source](https://doi.org/10.1021/acs.jcim.5c02099)]
 
 
 
