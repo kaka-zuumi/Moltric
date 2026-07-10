@@ -8,7 +8,7 @@ from scipy.sparse.csgraph import floyd_warshall
 import os
 
 
-def molecule_alignment(
+def otmol_alignment(
         X_A, 
         X_B, 
         T_A, 

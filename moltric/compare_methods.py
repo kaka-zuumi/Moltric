@@ -14,11 +14,12 @@ from scipy.spatial.distance import pdist, squareform
 
 from moltric import getDM, sortDM
 from moltric import QQkabsch, QQrmsd
-from moltric import DMD_GOAT
 from moltric import flapsolve, fqapsolve, spectral_linear_assignment     # For another set of comparisons
 
-from arbalign import arbalign                    # Kazuumi's python3 translation for ArbAlign
-from otmol_alignment import molecule_alignment   # OTMol
+from moltric import align_molecules              # The new GOAT algorithm for DMD
+
+from moltric import arbalign                     # ArbAlign
+from moltric import otmol_alignment              # OTMol
 from molalignlib import assign_atoms             # MolAlignLib
 from ase import Atoms                            # Needed for MolAlignLib
 
@@ -335,7 +336,7 @@ if __name__ == '__main__':
           # Method 2: OTMol (OTM)
           if True:
             alpha_list = np.arange(0, 1.0, 0.01)[1:]
-            perm_qap, otmol_rmsd, otmol_alpha = molecule_alignment(r_i, r_j, z, z, method="fGW", alpha_list=alpha_list)
+            perm_qap, otmol_rmsd, otmol_alpha = otmol_alignment(r_i, r_j, z, z, method="fGW", alpha_list=alpha_list)
 
             if calculate_RMSD_instead:
               RMSD1 = QQrmsd(*QQkabsch(r_i, r_j[perm_qap,:]))
@@ -419,12 +420,12 @@ if __name__ == '__main__':
           # Method 7: Do a single (forward) seeded GOAT for each atomic block
           if True:
             if calculate_RMSD_instead:
-              perm_qap, perm_DMD, NiterationsGOAT = DMD_GOAT(z,DM_i=DMii,DM_j=DMjj,r_i=r_i,r_j=r_j,z_order="forward",metric="RMSD")
+              perm_qap, perm_DMD, NiterationsGOAT = align_molecules(z,DM_i=DMii,DM_j=DMjj,r_i=r_i,r_j=r_j,z_order="forward",metric="RMSD")
               RMSD1 = QQrmsd(*QQkabsch(r_i, r_j[perm_qap,:]))
               RMSD2 = QQrmsd(*QQkabsch(r_i, -r_j[perm_qap,:]))
               qapDMD = min(RMSD1,RMSD2)
             else:
-              perm_qap, perm_DMD, NiterationsGOAT = DMD_GOAT(z,DM_i=DMii,DM_j=DMjj,z_order="forward",metric="DMD")
+              perm_qap, perm_DMD, NiterationsGOAT = align_molecules(z,DM_i=DMii,DM_j=DMjj,z_order="forward",metric="DMD")
               qapDMD = np.sum((DMii - DMjj[perm_qap,:][:,perm_qap])**2)
 
             qapDMDs["GOATf"] = qapDMD
@@ -432,12 +433,12 @@ if __name__ == '__main__':
           # Method 8: Do a complete seeded GOAT for each atomic block
           if True:
             if calculate_RMSD_instead:
-              perm_qap, perm_DMD, totalNiterationsGOAT = DMD_GOAT(z,DM_i=DMii,DM_j=DMjj,r_i=r_i,r_j=r_j,z_order="complete",metric="RMSD")
+              perm_qap, perm_DMD, totalNiterationsGOAT = align_molecules(z,DM_i=DMii,DM_j=DMjj,r_i=r_i,r_j=r_j,z_order="complete",metric="RMSD")
               RMSD1 = QQrmsd(*QQkabsch(r_i, r_j[perm_qap,:]))
               RMSD2 = QQrmsd(*QQkabsch(r_i, -r_j[perm_qap,:]))
               qapDMD = min(RMSD1,RMSD2)
             else:
-              perm_qap, perm_DMD, totalNiterationsGOAT = DMD_GOAT(z,DM_i=DMii,DM_j=DMjj,z_order="complete",metric="DMD")
+              perm_qap, perm_DMD, totalNiterationsGOAT = align_molecules(z,DM_i=DMii,DM_j=DMjj,z_order="complete",metric="DMD")
               qapDMD = np.sum((DMii - DMjj[perm_qap,:][:,perm_qap])**2)
 
             qapDMDs["GOATc"] = qapDMD

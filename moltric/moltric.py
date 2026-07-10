@@ -4,7 +4,7 @@ import numpy as np
 from scipy.optimize import quadratic_assignment, linear_sum_assignment
 from scipy.spatial.distance import pdist, squareform
 
-from qapot import quadratic_assignment_ot # From that paper
+from .qapot import quadratic_assignment_ot # From that paper
 
 #import torch
 
@@ -56,7 +56,7 @@ def sortDM(DM,z,z_unique_order):
 
 # The best QAP solver for DMD using the GOAT algorithm
 
-def DMD_GOAT(z,r_i=None,r_j=None,DM_i=None,DM_j=None,z_order="symmetric",metric="DMD"):
+def align_molecules(z,r_i=None,r_j=None,DM_i=None,DM_j=None,z_order="symmetric",metric="DMD"):
 
   # Input:
   #              z - the atomic symbols (assumes the two molecules have the same ordering)
@@ -933,12 +933,12 @@ if __name__ == '__main__':
       for r_j,DMjj in zip(train_Rj,train_DMj):
 
         if calculate_RMSD_instead:
-          perm_qap, perm_DMD, totalNiterationsGOAT = DMD_GOAT(z,DM_i=DMii,DM_j=DMjj,r_i=r_i,r_j=r_j,z_order=z_order,metric="RMSD")
+          perm_qap, perm_DMD, totalNiterationsGOAT = align_molecules(z,DM_i=DMii,DM_j=DMjj,r_i=r_i,r_j=r_j,z_order=z_order,metric="RMSD")
           RMSD1 = QQrmsd(*QQkabsch(r_i, r_j[perm_qap,:]))
           RMSD2 = QQrmsd(*QQkabsch(r_i, -r_j[perm_qap,:]))
           qapDMD = min(RMSD1,RMSD2)
         else:
-          perm_qap, perm_DMD, totalNiterationsGOAT = DMD_GOAT(z,DM_i=DMii,DM_j=DMjj,z_order=z_order,metric="DMD")
+          perm_qap, perm_DMD, totalNiterationsGOAT = align_molecules(z,DM_i=DMii,DM_j=DMjj,z_order=z_order,metric="DMD")
           qapDMD = np.sum((DMii - DMjj[perm_qap,:][:,perm_qap])**2)
 
         print("  {:4d} {:4d}    {:8.4f}".format(i,j,qapDMD),flush=True)

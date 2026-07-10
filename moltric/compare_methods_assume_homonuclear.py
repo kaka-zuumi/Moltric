@@ -18,8 +18,8 @@ from moltric import flapsolve, fqapsolve, spectral_linear_assignment     # For a
 
 from moltric import align_molecules              # The new GOAT algorithm for DMD
 
-from arbalign import arbalign                    # Kazuumi's python3 translation for ArbAlign
-from otmol_alignment import molecule_alignment   # OTMol
+from moltric import arbalign                     # ArbAlign
+from moltric import otmol_alignment              # OTMol
 from molalignlib import assign_atoms             # MolAlignLib
 from ase import Atoms                            # Needed for MolAlignLib
 from fastoverlap import SphericalAlign           # FASTOVERLAP
@@ -357,7 +357,7 @@ if __name__ == '__main__':
           # Method 2: OTMol (OTM)
           if True:
             alpha_list = np.arange(0, 1.0, 0.01)[1:]
-            perm_qap, otmol_rmsd, otmol_alpha = molecule_alignment(r_i, r_j, z, z, method="fGW", alpha_list=alpha_list)
+            perm_qap, otmol_rmsd, otmol_alpha = otmol_alignment(r_i, r_j, z, z, method="fGW", alpha_list=alpha_list)
 
             if calculate_RMSD_instead:
               RMSD1 = QQrmsd(*QQkabsch(r_i, r_j[perm_qap,:]))
