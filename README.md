@@ -5,7 +5,7 @@ For questions or suggestions for features to add, contact Kazuumi Fujioka: kazuu
 
 
 
-## How do you best *overlap* two molecules? What is the optimal *order* of atoms?
+## How do you best *overlap* two molecules? How do we order the atoms?
 
 <p align="center">
 <img width="900" height="400" src="images/permutation1.png">
