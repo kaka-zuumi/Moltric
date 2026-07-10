@@ -4,9 +4,8 @@ For installation of Moltric, use pip: `pip install moltric`
 For questions or suggestions for features to add, contact Kazuumi Fujioka: kazuumi@hawaii.edu
 
 
-# Introduction
 
-What is the optimal way to orient two molecules? What if they are very different? What if you don't know what order they *should* be in?
+## How do you best *overlap* two molecules? What is the optimal *order* of atoms?
 
 <p align="center">
 <img width="900" height="400" src="permutation1.png">
@@ -28,6 +27,23 @@ Many groups have already tried to find the best algorithm, but improvements are 
 <p align="center">
 <img width="900" height="400" src="rmsdtools1.png">
 </p>
+
+# Comparing Software
+
+
+A few benchmarks will be compared over:
+- C10H9BiRxn (Bimolecular Reaction of CH + C_9H_8 and C_2H_4 + C_8H_5)
+- H3CSBiRxn (Bimolecular Reaction of CH + H_2S)
+- H5CBrBiRxn (Bimolecular Reaction of HBr^+ + CH_4)
+- Ne20 (20-atom Subsets of a Neon_{200} Cluster) [[source](https://doi.org/10.1021/acs.jcim.5c02099)]
+- Ne180 (180-atom Subsets of a Neon_{200} Cluster) [[source](https://doi.org/10.1021/acs.jcim.5c02099)]
+- FGG (FGG tripeptide C_{13}H_{17}N_3O_4 Conformers) [[source](https://doi.org/10.1021/acs.jcim.5c02099)]
+- BsMaWa (Bisulfate-Methylammonium-Water Cluster CH_9NO_5S Conformers) [[source](https://doi.org/10.1021/acs.jcim.5c02099)]
+
+
+
+
+# Usage:
 
 ## Comparing two sets of molecules:
 
