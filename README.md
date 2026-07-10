@@ -8,7 +8,7 @@ For questions or suggestions for features to add, contact Kazuumi Fujioka: kazuu
 ## How do you best *overlap* two molecules? What is the optimal *order* of atoms?
 
 <p align="center">
-<img width="900" height="400" src="permutation1.png">
+<img width="900" height="400" src="images/permutation1.png">
 </p>
 
 ### Finding the best algorithm to do this is a Holy Grail
@@ -25,7 +25,7 @@ Many groups have searched for this, but improvements are constantly being made:
 
 
 <p align="center">
-<img width="900" height="400" src="rmsdtools1.png">
+<img width="900" height="400" src="images/rmsdtools1.png">
 </p>
 
 # Comparing Software
