@@ -11,17 +11,17 @@ For questions or suggestions for features to add, contact Kazuumi Fujioka: kazuu
 <img width="900" height="400" src="permutation1.png">
 </p>
 
+### Finding the best algorithm to do this is a Holy Grail
+Many groups have searched for this, but improvements are constantly being made:
 
-Many groups have already tried to find the best algorithm, but improvements are constantly being made:
 
+- ArbAlign, 2017: [[github](https://github.com/berhane/arbalign)] [[paper](https://doi.org/10.1021/acs.jcim.6b00546)]
 
-- ArbAlign, 2017: [github](https://github.com/berhane/arbalign) [paper](https://doi.org/10.1021/acs.jcim.6b00546)
+- FASTOVERLAP, 2017: [[github](https://github.com/matthewghgriffiths/fastoverlap)] [[paper](https://doi.org/10.1021/acs.jctc.7b00543)]
 
-- FASTOVERLAP, 2017: [github](https://github.com/matthewghgriffiths/fastoverlap) [paper](https://doi.org/10.1021/acs.jctc.7b00543)
+- MolAlignLib, 2023: [[github](https://github.com/qcuaeh/molalignlib)] [[paper](https://doi.org/10.1021/acs.jcim.2c01187)]
 
-- MolAlignLib, 2023: [github](https://github.com/qcuaeh/molalignlib) [paper](https://doi.org/10.1021/acs.jcim.2c01187)
-
-- OTMol, 2025: [github](https://github.com/weixiaoqimath/otmol) [paper](https://doi.org/10.1021/acs.jcim.5c02099)
+- OTMol, 2025: [[github](https://github.com/weixiaoqimath/otmol)] [[paper](https://doi.org/10.1021/acs.jcim.5c02099)]
 
 
 <p align="center">
