@@ -34,17 +34,25 @@ Many groups have searched for this, but improvements are constantly being made:
 
 # Comparing Software
 
+We can see which software best optimizes the molecular overlap by seeing whether they find the minimum RMSD (among the permutations checked).
+
+<p align="center">
+<img width="900" height="400" src="images/minrmsd_homo_result1.png">
+</p>
 
 A few benchmarks will be compared over:
 - C10H9 (Bimolecular Reaction of CH + C<sub>9</sub>H<sub>8</sub> and C<sub>2</sub>H<sub>4</sub> + C<sub>8</sub>H<sub>5</sub>)
-- H3CS (Bimolecular Reaction of CH + H<sub>2</sub>S)
 - H5CBr (Bimolecular Reaction of HBr<sup>+</sup> + CH<sub>4</sub>)
 - Ne20 (20-atom Subsets of a Neon<sub>200</sub> Cluster) [[source](https://doi.org/10.1021/acs.jcim.5c02099)]
 - Ne180 (180-atom Subsets of a Neon<sub>200</sub> Cluster) [[source](https://doi.org/10.1021/acs.jcim.5c02099)]
 - FGG (FGG tripeptide C<sub>13</sub>H<sub>17</sub>N<sub>3</sub>O<sub>4</sub> Conformers) [[source](https://doi.org/10.1021/acs.jcim.5c02099)]
-- BsMaWa (Bisulfate-Methylammonium-Water Cluster CH<sub>9</sub>NO<sub>5</sub>S Conformers) [[source](https://doi.org/10.1021/acs.jcim.5c02099)]
+- SMAW (Sulfate-Methylammonium-Water Cluster CH<sub>9</sub>NO<sub>5</sub>S Conformers) [[source](https://doi.org/10.1021/acs.jcim.5c02099)]
 
+We can now see how these "optimal overlaps" work for distance matrices.
 
+<p align="center">
+<img width="900" height="400" src="images/mindmd_homo_result1.png">
+</p>
 
 
 # Usage:
