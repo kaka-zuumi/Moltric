@@ -16,7 +16,7 @@ For questions or suggestions for features to add, contact Kazuumi Fujioka: kazuu
 </p>
 
 ### Finding the best algorithm to do this is a Holy Grail
-Many groups have searched for this, but there is no consensus on a *best* method.
+Many groups have searched for this, but there is no consensus on a *best* method. For example:
 
 
 - ArbAlign, 2017: [[github](https://github.com/berhane/arbalign)] [[paper](https://doi.org/10.1021/acs.jcim.6b00546)]
