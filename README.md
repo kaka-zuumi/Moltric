@@ -55,7 +55,7 @@ These software are designed to optimize overlap by minimizing RMSD. If instead, 
 </p>
 
 
-# Usage:
+# Usage
 
 ## Comparing two sets of molecules:
 
