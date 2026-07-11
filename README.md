@@ -62,7 +62,7 @@ These software are designed to optimize overlap by minimizing RMSD. If instead, 
 From a terminal, prepare two xyz files of the two sets of molecules. Then call Moltric, like so:
 
 ```
-moltric/moltric.py examples/fromFujioka_CH.indene_19atoms.xyz examples/fromFujioka_CH.indene_19atoms.xyz
+moltric-cli examples/fromFujioka_CH.indene_19atoms.xyz examples/fromFujioka_CH.indene_19atoms.xyz
 ```
 
 this produces:
@@ -87,12 +87,12 @@ this produces:
 ```
 
 
-## Benchmarking different molecule alignments for RMSD:
+## Benchmarking the RMSD or DMD:
 
-Moltric and other methods can be compared with `compare_methods.py` from the terminal on an example xyz file:
+Moltric and other methods can be compared with the benchmarking scripts like `benchmarking/compare_methods.py` from the terminal on an example xyz file:
 
 ```
-cat examples/fromFujioka_CH.indene_19atoms.xyz | moltric/compare_methods.py 0.00001 output.xyz
+cat examples/fromFujioka_H5CBr_7atoms.xyz | benchmarking/compare_methods.py 0.00001 output.xyz
 ```
 
 this produces:
