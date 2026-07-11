@@ -15,7 +15,7 @@ from moltric import align_molecules              # The new GOAT algorithm for DM
 ##################################################################################################################################
 
 
-if __name__ == '__main__':
+def main():
 
     calculate_RMSD_instead = False
 
@@ -178,4 +178,8 @@ if __name__ == '__main__':
 
         j += 1
       i += 1
+
+
+if __name__ == '__main__':
+    main()
 
