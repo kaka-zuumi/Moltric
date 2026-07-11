@@ -54,6 +54,7 @@ These software are designed to optimize overlap by minimizing RMSD. If instead, 
 <img width="900" height="1300" src="images/mindmd_homo_result1.png">
 </p>
 
+Moltric focuses on minimizing the DMD by reframing the overlap problem as an inexact graph matching. Modern quadratic assignment problem (QAP) solvers can be used to solve this matching. A cutting-edge algorithm, graph matching via optimal transport (GOAT) uses the lightspeed optimal transport (LOT) algorithm to solve QAPs. [[github](https://github.com/neurodata/goat)] [[paper](https://arxiv.org/abs/2111.05366)]
 
 # Usage
 
