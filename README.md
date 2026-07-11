@@ -9,7 +9,7 @@ For questions or suggestions for features to add, contact Kazuumi Fujioka: kazuu
 
 
 
-## How do you best overlap two molecules?
+# How do you best overlap two molecules?
 
 <p align="center">
 <img width="700" height="300" src="images/permutation1.png">
@@ -29,7 +29,7 @@ Many groups have searched for this, but improvements are constantly being made:
 
 
 <p align="center">
-<img width="700" height="300" src="images/rmsdtools1.png">
+<img width="900" height="400" src="images/rmsdtools1.png">
 </p>
 
 # Comparing Software
