@@ -2,4 +2,4 @@ from .moltric import *
 from .arbalign import arbalign                    # Kazuumi's python3 translation for ArbAlign
 from .otmol_alignment import otmol_alignment      # Copy of OTMol for benchmarking
 
-__version__ = "0.0.2"
+__version__ = "1.0.0"
