@@ -37,7 +37,7 @@ Many groups have searched for this, but improvements are constantly being made:
 We can see which software best optimizes the molecular overlap by seeing whether they find the minimum RMSD (among the permutations checked).
 
 <p align="center">
-<img width="900" height="400" src="images/minrmsd_homo_result1.png">
+<img width="900" height="1300" src="images/minrmsd_homo_result1.png">
 </p>
 
 A few benchmarks will be compared over:
@@ -51,7 +51,7 @@ A few benchmarks will be compared over:
 We can now see how these "optimal overlaps" work for distance matrices.
 
 <p align="center">
-<img width="900" height="400" src="images/mindmd_homo_result1.png">
+<img width="900" height="1300" src="images/mindmd_homo_result1.png">
 </p>
 
 
