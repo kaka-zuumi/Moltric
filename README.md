@@ -1,4 +1,8 @@
 
+<p align="center">
+<img width="900" height="400" src="images/moltric_logo1.png">
+</p>
+
 For installation of Moltric, use pip: `pip install moltric`
 
 For questions or suggestions for features to add, contact Kazuumi Fujioka: kazuumi@hawaii.edu
@@ -8,7 +12,7 @@ For questions or suggestions for features to add, contact Kazuumi Fujioka: kazuu
 ## How do you best *overlap* two molecules? How do we order the atoms?
 
 <p align="center">
-<img width="900" height="400" src="images/permutation1.png">
+<img width="600" height="300" src="images/permutation1.png">
 </p>
 
 ### Finding the best algorithm to do this is a Holy Grail
@@ -25,7 +29,7 @@ Many groups have searched for this, but improvements are constantly being made:
 
 
 <p align="center">
-<img width="900" height="400" src="images/rmsdtools1.png">
+<img width="600" height="300" src="images/rmsdtools1.png">
 </p>
 
 # Comparing Software
